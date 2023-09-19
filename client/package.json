@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.14",
     "@apollo/server": "^4.9.3",
     "bootstrap": "^5.2.3",
     "gql": "^1.1.2",
