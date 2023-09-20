@@ -29,13 +29,13 @@ const resolvers = {
             }
 
             // Checking if password is correct
-            const correctPw = await User.isCorrectPassword(password);
+            const correctPw = await user.isCorrectPassword(password);
             if (!correctPw) {
                 throw AuthenticationError;
             }
 
             const token = signToken(user);
-            return { token, profile };
+            return { token, user };
         },
         addUser: async (parent, { username, email, password }) => {
             const user = await User.create({ username, email, password });
